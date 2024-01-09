@@ -5,9 +5,9 @@ using UnityEngine;
 
 public class RTSPlayer : NetworkBehaviour
 {
-  [SerializeField] private List<Unit> myUnits = new List<Unit>();
+    [SerializeField] private List<Unit> myUnits = new List<Unit>();
 
-   #region Server
+    #region Server
 
     public override void OnStartServer()
     {
@@ -23,16 +23,18 @@ public class RTSPlayer : NetworkBehaviour
 
     private void ServerHandleUnitSpawned(Unit unit)
     {
-        if (unit.connectionToClient.connectionId != connectionToClient.connectionId) {return;}
+        if (unit.connectionToClient.connectionId != connectionToClient.connectionId) { return; }
 
         myUnits.Add(unit);
     }
+
     private void ServerHandleUnitDespawned(Unit unit)
     {
-        if(unit.connectionToClient.connectionId != connectionToClient.connectionId) {return;}
+        if (unit.connectionToClient.connectionId != connectionToClient.connectionId) { return; }
 
         myUnits.Remove(unit);
     }
+
     #endregion
 
     #region Client
@@ -40,7 +42,7 @@ public class RTSPlayer : NetworkBehaviour
     public override void OnStartClient()
     {
         if (!isClientOnly) { return; }
-        
+
         Unit.AuthorityOnUnitSpawned += AuthorityHandleUnitSpawned;
         Unit.AuthorityOnUnitDespawned += AuthorityHandleUnitDespawned;
     }
@@ -53,18 +55,19 @@ public class RTSPlayer : NetworkBehaviour
         Unit.AuthorityOnUnitDespawned -= AuthorityHandleUnitDespawned;
     }
 
- private void AuthorityHandleUnitSpawned(Unit unit)
+    private void AuthorityHandleUnitSpawned(Unit unit)
     {
-        if(!hasAuthority) {return;}
+        if (!hasAuthority) { return; }
 
         myUnits.Add(unit);
     }
+
     private void AuthorityHandleUnitDespawned(Unit unit)
     {
-        if(!hasAuthority) {return;}
+        if (!hasAuthority) { return; }
 
         myUnits.Remove(unit);
     }
 
-    #endregion 
+    #endregion
 }

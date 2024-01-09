@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using Mirror;
-using UnityEditor.SceneManagement;
 using UnityEngine;
 
 public class RTSPlayer : NetworkBehaviour

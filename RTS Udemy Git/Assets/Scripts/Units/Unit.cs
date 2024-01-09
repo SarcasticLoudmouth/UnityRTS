@@ -39,6 +39,8 @@ public override void OnStopServer()
 
     public override void OnStartClient()
     {
+        if(!isClientOnly || !hasAuthority) {return;}
+        
         AuthorityOnUnitSpawned?.Invoke(this);
     }
 

@@ -2,6 +2,7 @@
 using Mirror;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 
@@ -31,17 +32,24 @@ public class UnitSpawner : NetworkBehaviour, IPointerClickHandler
 
     #region Client
 
+ public void OnMouseDown()
+    {
+        if (!hasAuthority) return;
+ 
+        if (Mouse.current.leftButton.wasPressedThisFrame)
+        {
+ 
+            CmdSpawnUnit();
+        }
+    }
+
     public void OnPointerClick(PointerEventData eventData)
     {
-        if (eventData.button != PointerEventData.InputButton.Left) { return; }
-
-        if (!hasAuthority) { return; }
-
-        CmdSpawnUnit();
-
+        throw new System.NotImplementedException();
     }
-    #endregion
 }
+    #endregion
+
 
 
 

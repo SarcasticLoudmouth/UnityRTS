@@ -6,6 +6,10 @@ using UnityEngine;
 public class RTSPlayer : NetworkBehaviour
 {
     [SerializeField] private List<Unit> myUnits = new List<Unit>();
+    public List<Unit> GetMyUnits()
+    {
+        return myUnits;
+    }
 
     #region Server
 

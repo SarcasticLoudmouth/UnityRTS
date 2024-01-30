@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 3238855864194319253}
   - component: {fileID: 5926424978139674077}
   - component: {fileID: 475425102162843876}
+  - component: {fileID: 538636250333367895}
   m_Layer: 0
   m_Name: Unit
   m_TagString: Untagged
@@ -40,6 +41,7 @@ Transform:
   - {fileID: 5251511251332570296}
   - {fileID: 2331911043149415243}
   - {fileID: 1924583082682882122}
+  - {fileID: 8787042093474689118}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6607943037406516843
@@ -133,6 +135,7 @@ MonoBehaviour:
   syncInterval: 0
   agent: {fileID: 1776700190707325102}
   targeter: {fileID: 475425102162843876}
+  chaseRange: 10
 --- !u!114 &3303458721092178018
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -220,7 +223,27 @@ MonoBehaviour:
   syncDirection: 0
   syncMode: 0
   syncInterval: 0
-  target: {fileID: 0}
+--- !u!114 &538636250333367895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 313834417612551070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bbdcaa5cf1f03341aa2d85480d2f10d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncDirection: 0
+  syncMode: 0
+  syncInterval: 0
+  targeter: {fileID: 475425102162843876}
+  projectilePrefab: {fileID: 4130136607008215227, guid: a5f8624b438a75742bda9afdb1b6c18f, type: 3}
+  projectileSpawnPoint: {fileID: 8787042093474689118}
+  fireRange: 11
+  fireRate: 1
+  rotationSpeed: 180
 --- !u!1 &4875934965106558466
 GameObject:
   m_ObjectHideFlags: 0
@@ -305,6 +328,37 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &8115020279595035190
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8787042093474689118}
+  m_Layer: 0
+  m_Name: ProjectileSpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8787042093474689118
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8115020279595035190}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.028, y: 1.709, z: 2.597}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5894919744353138786}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8367345607016453312
 GameObject:
   m_ObjectHideFlags: 0

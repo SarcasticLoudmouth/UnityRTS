@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using Mirror;
 using UnityEngine;
@@ -9,7 +9,7 @@ public class RTSNetworkManager : NetworkManager
     [SerializeField] private GameObject unitSpawnerPrefab = null;
     [SerializeField] private GameOverHandler gameOverHandlerPrefab = null;
 
-    public override void OnServerAddPlayer (NetworkConnection conn)
+    public override void OnServerAddPlayer(NetworkConnectionToClient conn)
     {
         base.OnServerAddPlayer(conn);
 

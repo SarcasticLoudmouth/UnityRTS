@@ -1,30 +1,41 @@
-
+﻿using System.Collections;
+using System.Collections.Generic;
 using Mirror;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.InputSystem;
-using UnityEngine.UI;
-
-
-
 
 public class UnitSpawner : NetworkBehaviour, IPointerClickHandler
 {
+    [SerializeField] private Health health = null;
     [SerializeField] private GameObject unitPrefab = null;
     [SerializeField] private Transform unitSpawnPoint = null;
 
-
     #region Server
+
+    public override void OnStartServer()
+    {
+        health.ServerOnDie += ServerHandleDie;
+    }
+
+    public override void OnStopServer()
+    {
+        health.ServerOnDie -= ServerHandleDie;
+    }
+
+    [Server]
+    private void ServerHandleDie()
+    {
+        NetworkServer.Destroy(gameObject);
+    }
 
     [Command]
     private void CmdSpawnUnit()
     {
         GameObject unitInstance = Instantiate(
-            unitPrefab.gameObject,
+            unitPrefab,
             unitSpawnPoint.position,
             unitSpawnPoint.rotation);
 
-        
         NetworkServer.Spawn(unitInstance, connectionToClient);
     }
 
@@ -32,24 +43,14 @@ public class UnitSpawner : NetworkBehaviour, IPointerClickHandler
 
     #region Client
 
- public void OnMouseDown()
-    {
-        if (!hasAuthority) return;
- 
-        if (Mouse.current.leftButton.wasPressedThisFrame)
-        {
- 
-            CmdSpawnUnit();
-        }
-    }
-
     public void OnPointerClick(PointerEventData eventData)
     {
-        throw new System.NotImplementedException();
+        if (eventData.button != PointerEventData.InputButton.Left) { return; }
+
+        if (!hasAuthority) { return; }
+
+        CmdSpawnUnit();
     }
-}
+
     #endregion
-
-
-
-
+}

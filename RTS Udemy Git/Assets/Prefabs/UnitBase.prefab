@@ -116,7 +116,7 @@ Transform:
   m_GameObject: {fileID: 6178085839999212943}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: 0}
+  m_LocalPosition: {x: 0, y: 0.805, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -212,7 +212,7 @@ MonoBehaviour:
   syncDirection: 0
   syncMode: 0
   syncInterval: 0
-  health: {fileID: 0}
+  health: {fileID: 2278676525670168322}
   unitPrefab: {fileID: 313834417612551070, guid: 3a7ce78980cf63c4e89b11c146f3b20e, type: 3}
   unitSpawnPoint: {fileID: 2180358964928398593}
 --- !u!114 &6139407976551487153

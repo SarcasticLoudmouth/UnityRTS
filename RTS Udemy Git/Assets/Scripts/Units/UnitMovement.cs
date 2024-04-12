@@ -1,4 +1,4 @@
-using Mirror;
+﻿using Mirror;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -9,6 +9,16 @@ public class UnitMovement : NetworkBehaviour
     [SerializeField] private float chaseRange = 10f;
 
     #region Server
+
+    public override void OnStartServer()
+    {
+        GameOverHandler.ServerOnGameOver += ServerHandleGameOver;
+    }
+
+    public override void OnStopServer()
+    {
+        GameOverHandler.ServerOnGameOver -= ServerHandleGameOver;
+    }
 
     [ServerCallback]
     private void Update()
@@ -46,6 +56,11 @@ public class UnitMovement : NetworkBehaviour
         agent.SetDestination(hit.position);
     }
 
+    [Server]
+    private void ServerHandleGameOver()
+    {
+        agent.ResetPath();
+    }
+
     #endregion
 }
-

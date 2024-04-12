@@ -66,7 +66,7 @@ MonoBehaviour:
   - {fileID: 313834417612551070, guid: 3a7ce78980cf63c4e89b11c146f3b20e, type: 3}
   - {fileID: 6178085839999212943, guid: 936e922e78d381a4d8da90a61cdf82d7, type: 3}
   - {fileID: 4130136607008215227, guid: a5f8624b438a75742bda9afdb1b6c18f, type: 3}
-  - {fileID: 0}
+  - {fileID: 6075451212724898592, guid: 9e9bbbcb8c6522b4d9d44388c8b5824c, type: 3}
   snapshotSettings:
     bufferTimeMultiplier: 2
     bufferLimit: 32

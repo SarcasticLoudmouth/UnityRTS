@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using Mirror;
@@ -20,6 +20,21 @@ public class Health : NetworkBehaviour
     public override void OnStartServer()
     {
         currentHealth = maxHealth;
+
+        UnitBase.ServerOnPlayerDie += ServerHandlePlayerDie;
+    }
+
+    public override void OnStopServer()
+    {
+        UnitBase.ServerOnPlayerDie -= ServerHandlePlayerDie;
+    }
+
+    [Server]
+    private void ServerHandlePlayerDie(int connectionId)
+    {
+        if (connectionToClient.connectionId != connectionId) { return; }
+
+        DealDamage(currentHealth);
     }
 
     [Server]
@@ -45,4 +60,3 @@ public class Health : NetworkBehaviour
 
     #endregion
 }
-

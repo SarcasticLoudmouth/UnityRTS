@@ -96,7 +96,7 @@ public class UnitSelectionHandler : MonoBehaviour
 
             if (!hit.collider.TryGetComponent<Unit>(out Unit unit)) { return; }
 
-            if (!unit.hasAuthority) { return; }
+            if (!unit.isOwned) { return; }
 
             SelectedUnits.Add(unit);
 

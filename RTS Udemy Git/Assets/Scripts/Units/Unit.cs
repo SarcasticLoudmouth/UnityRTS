@@ -1,4 +1,4 @@
-﻿using System;
+﻿﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using Mirror;
@@ -7,6 +7,7 @@ using UnityEngine.Events;
 
 public class Unit : NetworkBehaviour
 {
+    [SerializeField] private int resourceCost = 10;
     [SerializeField] private Health health = null;
     [SerializeField] private UnitMovement unitMovement = null;
     [SerializeField] private Targeter targeter = null;
@@ -18,6 +19,11 @@ public class Unit : NetworkBehaviour
 
     public static event Action<Unit> AuthorityOnUnitSpawned;
     public static event Action<Unit> AuthorityOnUnitDespawned;
+
+    public int GetResourceCost()
+    {
+        return resourceCost;
+    }
 
     public UnitMovement GetUnitMovement()
     {
@@ -62,7 +68,7 @@ public class Unit : NetworkBehaviour
 
     public override void OnStopClient()
     {
-        if (!hasAuthority) { return; }
+        if (!isOwned) { return; }
 
         AuthorityOnUnitDespawned?.Invoke(this);
     }
@@ -70,7 +76,7 @@ public class Unit : NetworkBehaviour
     [Client]
     public void Select()
     {
-        if (!hasAuthority) { return; }
+        if (!isOwned) { return; }
 
         onSelected?.Invoke();
     }
@@ -78,7 +84,7 @@ public class Unit : NetworkBehaviour
     [Client]
     public void Deselect()
     {
-        if (!hasAuthority) { return; }
+        if (!isOwned) { return; }
 
         onDeselected?.Invoke();
     }

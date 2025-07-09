@@ -154,6 +154,7 @@ MonoBehaviour:
   syncDirection: 0
   syncMode: 0
   syncInterval: 0
+  resourceCost: 10
   health: {fileID: 4668949702552329418}
   unitMovement: {fileID: 1671344350677004587}
   targeter: {fileID: 475425102162843876}

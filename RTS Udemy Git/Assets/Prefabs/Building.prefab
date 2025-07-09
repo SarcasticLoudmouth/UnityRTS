@@ -139,6 +139,7 @@ MonoBehaviour:
   syncDirection: 0
   syncMode: 0
   syncInterval: 0
+  buildingPreview: {fileID: 0}
   icon: {fileID: 0}
   id: -1
   price: 100

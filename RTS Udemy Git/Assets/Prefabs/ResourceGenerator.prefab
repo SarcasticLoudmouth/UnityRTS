@@ -166,16 +166,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2713038668891307040, guid: 8b16d88fdec16ff4cb022bb159e64ca7, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b16d88fdec16ff4cb022bb159e64ca7, type: 3}
---- !u!1 &4913816431096765281 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4870740853464591578, guid: 8b16d88fdec16ff4cb022bb159e64ca7, type: 3}
-  m_PrefabInstance: {fileID: 552037289924851643}
-  m_PrefabAsset: {fileID: 0}
 --- !u!23 &8752736508307842279 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 9141970275442971484, guid: 8b16d88fdec16ff4cb022bb159e64ca7, type: 3}
@@ -207,6 +203,10 @@ PrefabInstance:
       propertyPath: health
       value: 
       objectReference: {fileID: 4753894482729895182}
+    - target: {fileID: 4036924569258576425, guid: 7d17d709423714148ba36ca58dfc9f21, type: 3}
+      propertyPath: healthBarParent
+      value: 
+      objectReference: {fileID: 768595712262149327}
     - target: {fileID: 4823952654148342193, guid: 7d17d709423714148ba36ca58dfc9f21, type: 3}
       propertyPath: m_Center.y
       value: 0.5
@@ -278,7 +278,7 @@ PrefabInstance:
     - target: {fileID: 8812985581572484798, guid: 7d17d709423714148ba36ca58dfc9f21, type: 3}
       propertyPath: buildingPreview
       value: 
-      objectReference: {fileID: 4913816431096765281}
+      objectReference: {fileID: 4870740853464591578, guid: 8b16d88fdec16ff4cb022bb159e64ca7, type: 3}
     - target: {fileID: 8996964483329394067, guid: 7d17d709423714148ba36ca58dfc9f21, type: 3}
       propertyPath: sceneId
       value: 0
@@ -311,6 +311,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 4096166442136413174}
   m_SourcePrefab: {fileID: 100100000, guid: 7d17d709423714148ba36ca58dfc9f21, type: 3}
+--- !u!1 &768595712262149327 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6927508780529027965, guid: 7d17d709423714148ba36ca58dfc9f21, type: 3}
+  m_PrefabInstance: {fileID: 7676927839581708210}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1545226597947620225 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9221210763286553651, guid: 7d17d709423714148ba36ca58dfc9f21, type: 3}

@@ -66,7 +66,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncDirection: 0
   syncMode: 0
-  syncInterval: 0
+  syncInterval: 0.1
   buildingBlockLayer:
     serializedVersion: 2
     m_Bits: 1281

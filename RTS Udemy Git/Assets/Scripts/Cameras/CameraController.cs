@@ -31,7 +31,7 @@ public class CameraController : NetworkBehaviour
     [ClientCallback]
     private void Update()
     {
-        if (!hasAuthority || !Application.isFocused) { return; }
+        if (!isOwned || !Application.isFocused) { return; }
 
         UpdateCameraPosition();
     }

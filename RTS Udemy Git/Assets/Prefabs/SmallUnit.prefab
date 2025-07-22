@@ -112,6 +112,10 @@ PrefabInstance:
       propertyPath: m_Center.z
       value: 0.0035474896
       objectReference: {fileID: 0}
+    - target: {fileID: 3303458721092178018, guid: 3a7ce78980cf63c4e89b11c146f3b20e, type: 3}
+      propertyPath: resourceCost
+      value: 55
+      objectReference: {fileID: 0}
     - target: {fileID: 4668949702552329418, guid: 3a7ce78980cf63c4e89b11c146f3b20e, type: 3}
       propertyPath: maxHealth
       value: 50

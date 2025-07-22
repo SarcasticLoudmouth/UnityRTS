@@ -434,8 +434,8 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0
   health: {fileID: 4753894482729895182}
-  resourcesPerInterval: 10
-  interval: 2
+  resourcesPerInterval: 3
+  interval: 1
 --- !u!114 &4096166442136413174
 MonoBehaviour:
   m_ObjectHideFlags: 0

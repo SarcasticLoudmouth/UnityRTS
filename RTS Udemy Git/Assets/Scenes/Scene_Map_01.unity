@@ -175,10 +175,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PalmTree (3)
       objectReference: {fileID: 0}
-    - target: {fileID: 6458245026949238636, guid: 53801a4d15856c04c81453886b8051a5, type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -205,10 +201,6 @@ PrefabInstance:
     - target: {fileID: 1890436055231566739, guid: ebc2c4f27614ac844815b25a9d67baa7, type: 3}
       propertyPath: sceneId
       value: 1054763367
-      objectReference: {fileID: 0}
-    - target: {fileID: 6272355480712679131, guid: ebc2c4f27614ac844815b25a9d67baa7, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6483127541114591899, guid: ebc2c4f27614ac844815b25a9d67baa7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -275,10 +267,6 @@ PrefabInstance:
     - target: {fileID: 100000, guid: aef18f364fed1a64ba495d15dcee610d, type: 3}
       propertyPath: m_Name
       value: Crater01 (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: aef18f364fed1a64ba495d15dcee610d, type: 3}
-      propertyPath: m_Layer
-      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: aef18f364fed1a64ba495d15dcee610d, type: 3}
       propertyPath: m_LocalScale.x
@@ -348,10 +336,6 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 00b5a8045a3c3914bb0dfdf2d62f05c9, type: 3}
       propertyPath: m_Name
       value: Cactus
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 00b5a8045a3c3914bb0dfdf2d62f05c9, type: 3}
-      propertyPath: m_Layer
-      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 00b5a8045a3c3914bb0dfdf2d62f05c9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -559,10 +543,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PalmTree (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 6458245026949238636, guid: 53801a4d15856c04c81453886b8051a5, type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -611,10 +591,6 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 1b0f8caf6ec3ed644bf9751040d84dcb, type: 3}
       propertyPath: m_Name
       value: Dunes01
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 1b0f8caf6ec3ed644bf9751040d84dcb, type: 3}
-      propertyPath: m_Layer
-      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1b0f8caf6ec3ed644bf9751040d84dcb, type: 3}
       propertyPath: m_LocalScale.x
@@ -885,10 +861,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Concrete
       objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: a678ab9f67b4ce84093be35214bdb92d, type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a678ab9f67b4ce84093be35214bdb92d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 46.062958
@@ -990,10 +962,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cow
       objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 961487dad48770a4d867fcbcca1e5950, type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 961487dad48770a4d867fcbcca1e5950, type: 3}
       propertyPath: m_LocalPosition.x
       value: -38.5
@@ -1055,10 +1023,6 @@ PrefabInstance:
     - target: {fileID: 100000, guid: fd0d7091fe3f1d24e81321bc2e4209df, type: 3}
       propertyPath: m_Name
       value: Rocks03
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: fd0d7091fe3f1d24e81321bc2e4209df, type: 3}
-      propertyPath: m_Layer
-      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: fd0d7091fe3f1d24e81321bc2e4209df, type: 3}
       propertyPath: m_LocalScale.x
@@ -1286,13 +1250,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.47187567, y: -0, z: -0, w: 0.8816651}
-  m_LocalPosition: {x: 0.194, y: 24.961, z: -0.846}
+  m_LocalRotation: {x: 0.38268343, y: 0, z: 0, w: 0.92387956}
+  m_LocalPosition: {x: 0, y: 20, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 56.312, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 45, y: 0, z: 0}
 --- !u!114 &963194229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1408,10 +1372,6 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 8f90bdc8aeb4bad4db0cb091100a44f4, type: 3}
       propertyPath: m_Name
       value: Rocks02
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 8f90bdc8aeb4bad4db0cb091100a44f4, type: 3}
-      propertyPath: m_Layer
-      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8f90bdc8aeb4bad4db0cb091100a44f4, type: 3}
       propertyPath: m_LocalScale.x
@@ -1530,10 +1490,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PalmTree (2)
       objectReference: {fileID: 0}
-    - target: {fileID: 6458245026949238636, guid: 53801a4d15856c04c81453886b8051a5, type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1555,10 +1511,6 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 50912a5d3c9322a46afa5ca162962a5c, type: 3}
       propertyPath: m_Name
       value: Tree
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 50912a5d3c9322a46afa5ca162962a5c, type: 3}
-      propertyPath: m_Layer
-      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 50912a5d3c9322a46afa5ca162962a5c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1722,10 +1674,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: BustedTank
       objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 8c6d26fe262194242becdec17209d306, type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8c6d26fe262194242becdec17209d306, type: 3}
       propertyPath: m_LocalPosition.x
       value: 40.8
@@ -1783,10 +1731,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cow
       objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 961487dad48770a4d867fcbcca1e5950, type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 961487dad48770a4d867fcbcca1e5950, type: 3}
       propertyPath: m_LocalPosition.x
       value: -47.810837
@@ -1843,10 +1787,6 @@ PrefabInstance:
     - target: {fileID: 100000, guid: aef18f364fed1a64ba495d15dcee610d, type: 3}
       propertyPath: m_Name
       value: Crater01
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: aef18f364fed1a64ba495d15dcee610d, type: 3}
-      propertyPath: m_Layer
-      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: aef18f364fed1a64ba495d15dcee610d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2137,10 +2077,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dunes02
       objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 38b4fea28f58d3641980a70a5188e750, type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 38b4fea28f58d3641980a70a5188e750, type: 3}
       propertyPath: m_LocalScale.x
       value: 5.620437
@@ -2299,10 +2235,6 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 74d835b756ff5654f8060c76cbcb4e19, type: 3}
       propertyPath: m_Name
       value: Column02
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 74d835b756ff5654f8060c76cbcb4e19, type: 3}
-      propertyPath: m_Layer
-      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 74d835b756ff5654f8060c76cbcb4e19, type: 3}
       propertyPath: m_LocalScale.x
@@ -2517,10 +2449,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ruins01
       objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 8c99ccdf18f6a404f84ffd08488298d8, type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8c99ccdf18f6a404f84ffd08488298d8, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.9405
@@ -2650,10 +2578,6 @@ PrefabInstance:
     - target: {fileID: 6458245026949238636, guid: 53801a4d15856c04c81453886b8051a5, type: 3}
       propertyPath: m_Name
       value: PalmTree
-      objectReference: {fileID: 0}
-    - target: {fileID: 6458245026949238636, guid: 53801a4d15856c04c81453886b8051a5, type: 3}
-      propertyPath: m_Layer
-      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2838,10 +2762,6 @@ PrefabInstance:
     - target: {fileID: 6458245026949238636, guid: 53801a4d15856c04c81453886b8051a5, type: 3}
       propertyPath: m_Name
       value: PalmTree
-      objectReference: {fileID: 0}
-    - target: {fileID: 6458245026949238636, guid: 53801a4d15856c04c81453886b8051a5, type: 3}
-      propertyPath: m_Layer
-      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

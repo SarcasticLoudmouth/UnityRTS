@@ -83,37 +83,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!1 &8085201687607164392
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3062443258046465540}
-  m_Layer: 0
-  m_Name: PointAtTarget
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &3062443258046465540
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8085201687607164392}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.533, z: 0.3}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2678176657258263739}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &6985394467005087105
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -212,18 +181,13 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 15.236838, y: 16.714005, z: 12.001774}
-  m_Center: {x: -0, y: 8.281684, z: -0.14480318}
+  m_Size: {x: 15.236838, y: 16.714006, z: 9.904759}
+  m_Center: {x: 0, y: 8.281684, z: 0.0000007152557}
 --- !u!4 &6985394467005474561 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 6e4d8dfe03882c54380948659f725233, type: 3}
-  m_PrefabInstance: {fileID: 6985394467005087105}
-  m_PrefabAsset: {fileID: 0}
---- !u!23 &6985394467007243745 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 2300000, guid: 6e4d8dfe03882c54380948659f725233, type: 3}
   m_PrefabInstance: {fileID: 6985394467005087105}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7676927839581708210
@@ -370,10 +334,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8678433901726300100, guid: 7d17d709423714148ba36ca58dfc9f21, type: 3}
-      propertyPath: aimAtPoint
-      value: 
-      objectReference: {fileID: 3062443258046465540}
     - target: {fileID: 8812985581572484798, guid: 7d17d709423714148ba36ca58dfc9f21, type: 3}
       propertyPath: id
       value: 0
@@ -407,9 +367,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5738472444118444809, guid: 7d17d709423714148ba36ca58dfc9f21, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6985394467005474561}
-    - targetCorrespondingSourceObject: {fileID: 5738472444118444809, guid: 7d17d709423714148ba36ca58dfc9f21, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 3062443258046465540}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 9221210763286553651, guid: 7d17d709423714148ba36ca58dfc9f21, type: 3}
       insertIndex: -1
@@ -455,7 +412,7 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0.1
   colorRenderers:
-  - {fileID: 6985394467007243745}
+  - {fileID: 0}
   - {fileID: 5689860970356845142}
 --- !u!4 &2678176657258263739 stripped
 Transform:

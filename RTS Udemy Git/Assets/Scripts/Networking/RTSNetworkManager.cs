@@ -1,4 +1,4 @@
-﻿﻿using System;
+﻿﻿﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using Mirror;
@@ -19,14 +19,14 @@ public class RTSNetworkManager : NetworkManager
 
     #region Server
 
-    public override void OnServerConnect(NetworkConnection conn)
+    public override void OnServerConnect(NetworkConnectionToClient conn)
     {
         if (!isGameInProgress) { return; }
 
         conn.Disconnect();
     }
 
-    public override void OnServerDisconnect(NetworkConnection conn)
+    public override void OnServerDisconnect(NetworkConnectionToClient conn)
     {
         RTSPlayer player = conn.identity.GetComponent<RTSPlayer>();
 
@@ -51,13 +51,15 @@ public class RTSNetworkManager : NetworkManager
         ServerChangeScene("Scene_Map_01");
     }
 
-    public override void OnServerAddPlayer(NetworkConnection conn)
+    public override void OnServerAddPlayer(NetworkConnectionToClient conn)
     {
         base.OnServerAddPlayer(conn);
 
         RTSPlayer player = conn.identity.GetComponent<RTSPlayer>();
 
         Players.Add(player);
+
+        player.SetDisplayName($"Player {Players.Count}");
 
         player.SetTeamColor(new Color(
             UnityEngine.Random.Range(0f, 1f),
@@ -92,16 +94,16 @@ public class RTSNetworkManager : NetworkManager
 
     #region Client
 
-    public override void OnClientConnect(NetworkConnection conn)
+    public override void OnClientConnect()
     {
-        base.OnClientConnect(conn);
+        base.OnClientConnect();
 
         ClientOnConnected?.Invoke();
     }
 
-    public override void OnClientDisconnect(NetworkConnection conn)
+    public override void OnClientDisconnect()
     {
-        base.OnClientDisconnect(conn);
+        base.OnClientDisconnect();
 
         ClientOnDisconnected?.Invoke();
     }

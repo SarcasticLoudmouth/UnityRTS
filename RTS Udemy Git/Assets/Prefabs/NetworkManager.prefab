@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 5667439396040517669}
   - component: {fileID: 9042212442391308473}
   - component: {fileID: 8959634600398476829}
-  - component: {fileID: 8416252504372394767}
   m_Layer: 0
   m_Name: NetworkManager
   m_TagString: Untagged
@@ -63,12 +62,12 @@ MonoBehaviour:
   autoCreatePlayer: 1
   playerSpawnMethod: 1
   spawnPrefabs:
-  - {fileID: 313834417612551070, guid: 3a7ce78980cf63c4e89b11c146f3b20e, type: 3}
   - {fileID: 1545226597947620225, guid: abe8e723e3546d0488e81ff41e15c3a1, type: 3}
-  - {fileID: 4130136607008215227, guid: a5f8624b438a75742bda9afdb1b6c18f, type: 3}
   - {fileID: 8812760896182768213, guid: ebc2c4f27614ac844815b25a9d67baa7, type: 3}
-  - {fileID: 1545226597947620225, guid: 3bb572b2ccca5954ca5a3019e3c059ca, type: 3}
   - {fileID: 1545226597947620225, guid: 4201d3a027ac83f4a8a2a3a6e38f16ad, type: 3}
+  - {fileID: 1664749424805816084, guid: 4777ec2c4c260ae40aab41ad181eb269, type: 3}
+  - {fileID: 2069188653634298093, guid: 34422d1cf9a39314eafbe7e9aaa80b18, type: 3}
+  - {fileID: 8841031023533007099, guid: 2c6c1ec79e9869a4a91bc07c6a68a8ad, type: 3}
   snapshotSettings:
     bufferTimeMultiplier: 2
     bufferLimit: 32
@@ -108,17 +107,3 @@ MonoBehaviour:
   clientMaxReceivesPerTick: 1000
   clientSendQueueLimit: 10000
   clientReceiveQueueLimit: 10000
---- !u!114 &8416252504372394767
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6222572496284086150}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6442dc8070ceb41f094e44de0bf87274, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  offsetX: 0
-  offsetY: 0

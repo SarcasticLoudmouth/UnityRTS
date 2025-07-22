@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -23,18 +22,23 @@ namespace Mirror.Examples.MultipleMatch
         public Text winCountLocal;
         public Text winCountOpponent;
 
-        [Header("Diagnostics - Do Not Modify")]
-        public CanvasController canvasController;
-        public NetworkIdentity player1;
-        public NetworkIdentity player2;
-        public NetworkIdentity startingPlayer;
+        [Header("Diagnostics")]
+        [ReadOnly, SerializeField] internal CanvasController canvasController;
+        [ReadOnly, SerializeField] internal NetworkIdentity player1;
+        [ReadOnly, SerializeField] internal NetworkIdentity player2;
+        [ReadOnly, SerializeField] internal NetworkIdentity startingPlayer;
 
         [SyncVar(hook = nameof(UpdateGameUI))]
-        public NetworkIdentity currentPlayer;
+        [ReadOnly, SerializeField] internal NetworkIdentity currentPlayer;
 
         void Awake()
         {
-            canvasController = FindObjectOfType<CanvasController>();
+#if UNITY_2022_2_OR_NEWER
+            canvasController = GameObject.FindAnyObjectByType<CanvasController>();
+#else
+            // Deprecated in Unity 2023.1
+            canvasController = GameObject.FindObjectOfType<CanvasController>();
+#endif
         }
 
         public override void OnStartServer()
@@ -54,14 +58,15 @@ namespace Mirror.Examples.MultipleMatch
 
         public override void OnStartClient()
         {
-            matchPlayerData.Callback += UpdateWins;
-
             canvasGroup.alpha = 1f;
             canvasGroup.interactable = true;
             canvasGroup.blocksRaycasts = true;
 
             exitButton.gameObject.SetActive(false);
             playAgainButton.gameObject.SetActive(false);
+
+            // Assign handler for SyncDictionary changes
+            matchPlayerData.OnChange = UpdateWins;
         }
 
         [ClientCallback]
@@ -104,7 +109,7 @@ namespace Mirror.Examples.MultipleMatch
             mpd.currentScore = mpd.currentScore | cellValue;
             matchPlayerData[currentPlayer] = mpd;
 
-            boardScore = boardScore | cellValue;
+            boardScore |= cellValue;
 
             if (CheckWinner(mpd.currentScore))
             {
@@ -204,9 +209,6 @@ namespace Mirror.Examples.MultipleMatch
         [ServerCallback]
         public void RestartGame()
         {
-            foreach (CellGUI cellGUI in MatchCells.Values)
-                cellGUI.SetPlayer(null);
-
             boardScore = CellValue.None;
 
             NetworkIdentity[] keys = new NetworkIdentity[matchPlayerData.Keys.Count];
@@ -251,7 +253,7 @@ namespace Mirror.Examples.MultipleMatch
         }
 
         [ServerCallback]
-        public void OnPlayerDisconnected(NetworkConnectionToClient conn)
+        public void OnPlayerDisconnect(NetworkConnectionToClient conn)
         {
             // Check that the disconnecting client is a player in this match
             if (player1 == conn.identity || player2 == conn.identity)
@@ -263,7 +265,7 @@ namespace Mirror.Examples.MultipleMatch
         {
             RpcExitGame();
 
-            canvasController.OnPlayerDisconnected -= OnPlayerDisconnected;
+            canvasController.OnPlayerDisconnect -= OnPlayerDisconnect;
 
             // Wait for the ClientRpc to get out ahead of object destruction
             yield return new WaitForSeconds(0.1f);
@@ -273,22 +275,22 @@ namespace Mirror.Examples.MultipleMatch
 
             if (!disconnected)
             {
-                NetworkServer.RemovePlayerForConnection(player1.connectionToClient, true);
+                NetworkServer.RemovePlayerForConnection(player1.connectionToClient, RemovePlayerOptions.Destroy);
                 CanvasController.waitingConnections.Add(player1.connectionToClient);
 
-                NetworkServer.RemovePlayerForConnection(player2.connectionToClient, true);
+                NetworkServer.RemovePlayerForConnection(player2.connectionToClient, RemovePlayerOptions.Destroy);
                 CanvasController.waitingConnections.Add(player2.connectionToClient);
             }
             else if (conn == player1.connectionToClient)
             {
                 // player1 has disconnected - send player2 back to Lobby
-                NetworkServer.RemovePlayerForConnection(player2.connectionToClient, true);
+                NetworkServer.RemovePlayerForConnection(player2.connectionToClient, RemovePlayerOptions.Destroy);
                 CanvasController.waitingConnections.Add(player2.connectionToClient);
             }
             else if (conn == player2.connectionToClient)
             {
                 // player2 has disconnected - send player1 back to Lobby
-                NetworkServer.RemovePlayerForConnection(player1.connectionToClient, true);
+                NetworkServer.RemovePlayerForConnection(player1.connectionToClient, RemovePlayerOptions.Destroy);
                 CanvasController.waitingConnections.Add(player1.connectionToClient);
             }
 

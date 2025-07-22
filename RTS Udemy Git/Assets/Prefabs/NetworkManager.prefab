@@ -10,7 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 5667439396040517669}
   - component: {fileID: 9042212442391308473}
-  - component: {fileID: 8959634600398476829}
+  - component: {fileID: 1617372995449733958}
+  - component: {fileID: 4926338507418908841}
+  - component: {fileID: 4770789474802979044}
   m_Layer: 0
   m_Name: NetworkManager
   m_TagString: Untagged
@@ -47,14 +49,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dontDestroyOnLoad: 1
   runInBackground: 1
-  autoStartServerBuild: 1
-  autoConnectClientBuild: 0
+  headlessStartMode: 0
+  editorAutoStart: 0
   sendRate: 60
   offlineScene: Assets/Scenes/Scene_Menu.unity
   onlineScene: 
-  transport: {fileID: 8959634600398476829}
+  offlineSceneLoadDelay: 0
+  transport: {fileID: 4926338507418908841}
   networkAddress: localhost
-  maxConnections: 100
+  maxConnections: 4
   disconnectInactiveConnections: 0
   disconnectInactiveTimeout: 60
   authenticator: {fileID: 0}
@@ -68,6 +71,7 @@ MonoBehaviour:
   - {fileID: 1664749424805816084, guid: 4777ec2c4c260ae40aab41ad181eb269, type: 3}
   - {fileID: 2069188653634298093, guid: 34422d1cf9a39314eafbe7e9aaa80b18, type: 3}
   - {fileID: 8841031023533007099, guid: 2c6c1ec79e9869a4a91bc07c6a68a8ad, type: 3}
+  exceptionsDisconnect: 1
   snapshotSettings:
     bufferTimeMultiplier: 2
     bufferLimit: 32
@@ -79,11 +83,41 @@ MonoBehaviour:
     dynamicAdjustment: 1
     dynamicAdjustmentTolerance: 1
     deliveryTimeEmaDuration: 2
-  connectionQualityInterval: 3
+  evaluationMethod: 0
+  evaluationInterval: 3
   timeInterpolationGui: 0
   unitBasePrefab: {fileID: 1545226597947620225, guid: abe8e723e3546d0488e81ff41e15c3a1, type: 3}
   gameOverHandlerPrefab: {fileID: 1089666567102904624, guid: 9e9bbbcb8c6522b4d9d44388c8b5824c, type: 3}
---- !u!114 &8959634600398476829
+--- !u!114 &1617372995449733958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6222572496284086150}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b0fecffa3f624585964b0d0eb21b18e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  port: 7777
+  DualMode: 1
+  NoDelay: 1
+  Interval: 10
+  Timeout: 10000
+  RecvBufferSize: 7361536
+  SendBufferSize: 7361536
+  FastResend: 2
+  ReceiveWindowSize: 4096
+  SendWindowSize: 4096
+  MaxRetransmit: 40
+  MaximizeSocketBuffers: 1
+  ReliableMaxMessageSize: 297433
+  UnreliableMaxMessageSize: 1194
+  debugLog: 0
+  statisticsGUI: 0
+  statisticsLog: 0
+--- !u!114 &4926338507418908841
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -92,18 +126,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 6222572496284086150}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c7424c1070fad4ba2a7a96b02fbeb4bb, type: 3}
+  m_Script: {fileID: 11500000, guid: e6e55fca1f4e4844593a3dd65a3ecb39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  port: 7777
-  NoDelay: 1
-  SendTimeout: 5000
-  ReceiveTimeout: 30000
-  serverMaxMessageSize: 16384
-  serverMaxReceivesPerTick: 10000
-  serverSendQueueLimitPerConnection: 10000
-  serverReceiveQueueLimitPerConnection: 10000
-  clientMaxMessageSize: 16384
-  clientMaxReceivesPerTick: 1000
-  clientSendQueueLimit: 10000
-  clientReceiveQueueLimit: 10000
+  Channels: 0200000001000000
+  Timeout: 25
+  AllowSteamRelay: 1
+  UseNextGenSteamNetworking: 1
+--- !u!114 &4770789474802979044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6222572496284086150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef4bffeda13d7a748973ff9204401c07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

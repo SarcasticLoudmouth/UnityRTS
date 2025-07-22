@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -257,6 +257,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 40833210}
   m_CullTransparentMesh: 1
+--- !u!114 &57026267 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1617372995449733958, guid: 8dd72428f01ca3d4a857ed3ea01b9086, type: 3}
+  m_PrefabInstance: {fileID: 1183692534}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b0fecffa3f624585964b0d0eb21b18e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &131381319
 GameObject:
   m_ObjectHideFlags: 0
@@ -1800,6 +1811,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lobbyUI: {fileID: 1220020050}
   startGameButton: {fileID: 2074144203}
+  playerNameTexts:
+  - {fileID: 1544584017}
+  - {fileID: 131381321}
+  - {fileID: 833663602}
+  - {fileID: 877894288}
 --- !u!1 &1127970104
 GameObject:
   m_ObjectHideFlags: 0
@@ -1926,6 +1942,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1617372995449733958, guid: 8dd72428f01ca3d4a857ed3ea01b9086, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4770789474802979044, guid: 8dd72428f01ca3d4a857ed3ea01b9086, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4926338507418908841, guid: 8dd72428f01ca3d4a857ed3ea01b9086, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5667439396040517669, guid: 8dd72428f01ca3d4a857ed3ea01b9086, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.18760493
@@ -1970,6 +1998,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: NetworkManager
       objectReference: {fileID: 0}
+    - target: {fileID: 9042212442391308473, guid: 8dd72428f01ca3d4a857ed3ea01b9086, type: 3}
+      propertyPath: transport
+      value: 
+      objectReference: {fileID: 57026267}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2949,6 +2981,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   landingPagePanel: {fileID: 1210044567}
+  useSteam: 0
 --- !u!1 &1612474605
 GameObject:
   m_ObjectHideFlags: 0

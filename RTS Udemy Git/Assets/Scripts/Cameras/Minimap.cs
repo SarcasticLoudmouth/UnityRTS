@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿﻿using System.Collections;
 using System.Collections.Generic;
 using Mirror;
 using UnityEngine;
@@ -17,7 +17,7 @@ public class Minimap : MonoBehaviour, IPointerDownHandler, IDragHandler
     {
         if (playerCameraTransform != null) { return; }
 
-        if (NetworkClient.connection.identity == null) { return; }
+        if (NetworkClient.connection?.identity == null) { return; }
 
         playerCameraTransform = NetworkClient.connection.identity
             .GetComponent<RTSPlayer>().GetCameraTransform();

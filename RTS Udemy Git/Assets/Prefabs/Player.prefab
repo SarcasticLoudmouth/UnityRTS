@@ -76,7 +76,8 @@ MonoBehaviour:
   - {fileID: 1209197272803799308, guid: 4201d3a027ac83f4a8a2a3a6e38f16ad, type: 3}
   - {fileID: 126810494654635133, guid: 7a6c111b6668e2d42b814c6c2e269ad4, type: 3}
   - {fileID: 5437270655947569794, guid: de3da2a1a8b1a4247b39825bce9591b8, type: 3}
-  buildingRangeLimit: 5
+  - {fileID: 8537366838579555027, guid: 3c59e7c26213c14439d0b64788c2c9a4, type: 3}
+  buildingRangeLimit: 7.5
 --- !u!114 &3795020759906837253
 MonoBehaviour:
   m_ObjectHideFlags: 0

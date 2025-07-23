@@ -434,7 +434,7 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0
   health: {fileID: 4753894482729895182}
-  resourcesPerInterval: 3
+  resourcesPerInterval: 5
   interval: 1
 --- !u!114 &4096166442136413174
 MonoBehaviour:

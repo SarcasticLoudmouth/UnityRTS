@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 848376960557586786, guid: 63636951c802ccf44be879909726edd5, type: 3}
       propertyPath: m_Name
-      value: MediumUnitProjectile Variant
+      value: LargeUnitProjectile
       objectReference: {fileID: 0}
     - target: {fileID: 2088699289063805617, guid: 63636951c802ccf44be879909726edd5, type: 3}
       propertyPath: sceneId
@@ -20,6 +20,10 @@ PrefabInstance:
       propertyPath: _assetId
       value: 3188537368
       objectReference: {fileID: 0}
+    - target: {fileID: 2228719295557133700, guid: 63636951c802ccf44be879909726edd5, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4300000, guid: 9ed1e8a25f964bd4298944675e425a0d, type: 3}
     - target: {fileID: 3030770109073652663, guid: 63636951c802ccf44be879909726edd5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -59,6 +63,22 @@ PrefabInstance:
     - target: {fileID: 3030770109073652663, guid: 63636951c802ccf44be879909726edd5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3223534084768758046, guid: 63636951c802ccf44be879909726edd5, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: db9ceca9e86a2724aaa5c3df2991dba7, type: 2}
+    - target: {fileID: 6307845929892791904, guid: 63636951c802ccf44be879909726edd5, type: 3}
+      propertyPath: launchForce
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6307845929892791904, guid: 63636951c802ccf44be879909726edd5, type: 3}
+      propertyPath: damageToDeal
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 6307845929892791904, guid: 63636951c802ccf44be879909726edd5, type: 3}
+      propertyPath: destroyAfterSeconds
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

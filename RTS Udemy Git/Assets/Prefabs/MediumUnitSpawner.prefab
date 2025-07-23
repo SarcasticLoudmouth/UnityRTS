@@ -128,6 +128,10 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1209197272803799308, guid: 3bb572b2ccca5954ca5a3019e3c059ca, type: 3}
+      propertyPath: id
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1209197272803799308, guid: 3bb572b2ccca5954ca5a3019e3c059ca, type: 3}
       propertyPath: price
       value: 100
       objectReference: {fileID: 0}

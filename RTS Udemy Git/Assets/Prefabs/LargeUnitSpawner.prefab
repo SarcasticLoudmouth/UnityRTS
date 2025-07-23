@@ -25,6 +25,10 @@ PrefabInstance:
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 126810494654635133, guid: 7a6c111b6668e2d42b814c6c2e269ad4, type: 3}
+      propertyPath: price
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 126810494654635133, guid: 7a6c111b6668e2d42b814c6c2e269ad4, type: 3}
       propertyPath: buildingPreview
       value: 
       objectReference: {fileID: 6100857798029571574}

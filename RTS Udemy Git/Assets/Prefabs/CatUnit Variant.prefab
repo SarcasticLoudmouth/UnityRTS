@@ -98,7 +98,7 @@ PrefabInstance:
       objectReference: {fileID: 3275832317616329665}
     - target: {fileID: 8357718736947963539, guid: 1f4e53dda9cd4c04aaa5549168b7865d, type: 3}
       propertyPath: maxHealth
-      value: 500
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 8852029051718868544, guid: 1f4e53dda9cd4c04aaa5549168b7865d, type: 3}
       propertyPath: m_LocalScale.x

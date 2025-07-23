@@ -552,14 +552,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: BuildingsDisplay
       objectReference: {fileID: 0}
-    - target: {fileID: 7984181999063810594, guid: 5827150a62398844c8cd0aaa54df0095, type: 3}
-      propertyPath: building
-      value: 
-      objectReference: {fileID: 9153556604540742262, guid: 2c6c1ec79e9869a4a91bc07c6a68a8ad, type: 3}
-    - target: {fileID: 9077668469435760472, guid: 5827150a62398844c8cd0aaa54df0095, type: 3}
-      propertyPath: m_MatchWidthOrHeight
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

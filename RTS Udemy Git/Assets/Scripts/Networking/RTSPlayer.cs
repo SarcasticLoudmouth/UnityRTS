@@ -221,13 +221,13 @@ public class RTSPlayer : NetworkBehaviour
     public override void OnStopClient()
     {
         ClientOnInfoUpdated?.Invoke();
-
+ 
         if (!isClientOnly) { return; }
-
+ 
         ((RTSNetworkManager)NetworkManager.singleton).Players.Remove(this);
-
+ 
         if (!isOwned) { return; }
-
+ 
         Unit.AuthorityOnUnitSpawned -= AuthorityHandleUnitSpawned;
         Unit.AuthorityOnUnitDespawned -= AuthorityHandleUnitDespawned;
         Building.AuthorityOnBuildingSpawned -= AuthorityHandleBuildingSpawned;

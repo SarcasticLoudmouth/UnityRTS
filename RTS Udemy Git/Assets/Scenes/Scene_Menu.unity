@@ -2217,6 +2217,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1617372995449733958, guid: 8dd72428f01ca3d4a857ed3ea01b9086, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4770789474802979044, guid: 8dd72428f01ca3d4a857ed3ea01b9086, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4926338507418908841, guid: 8dd72428f01ca3d4a857ed3ea01b9086, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4926338507418908841, guid: 8dd72428f01ca3d4a857ed3ea01b9086, type: 3}
+      propertyPath: Channels.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4926338507418908841, guid: 8dd72428f01ca3d4a857ed3ea01b9086, type: 3}
+      propertyPath: Channels.Array.data[2]
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5667439396040517669, guid: 8dd72428f01ca3d4a857ed3ea01b9086, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.18760493
@@ -2261,11 +2281,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: NetworkManager
       objectReference: {fileID: 0}
+    - target: {fileID: 9042212442391308473, guid: 8dd72428f01ca3d4a857ed3ea01b9086, type: 3}
+      propertyPath: transport
+      value: 
+      objectReference: {fileID: 1183692535}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8dd72428f01ca3d4a857ed3ea01b9086, type: 3}
+--- !u!114 &1183692535 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4926338507418908841, guid: 8dd72428f01ca3d4a857ed3ea01b9086, type: 3}
+  m_PrefabInstance: {fileID: 1183692534}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6e55fca1f4e4844593a3dd65a3ecb39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1210044567
 GameObject:
   m_ObjectHideFlags: 0
@@ -3241,7 +3276,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   landingPagePanel: {fileID: 1210044567}
-  useSteam: 0
+  useSteam: 1
 --- !u!1 &1612474605
 GameObject:
   m_ObjectHideFlags: 0

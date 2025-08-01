@@ -774,7 +774,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -34.32}
+  m_AnchoredPosition: {x: 0, y: -49}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &665424417
@@ -797,12 +797,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Age Of Tanks II:
+  m_text: 'ICH
 
-    Definitive Edition
+    LIEBE
 
-    Remastered - Director''s
-    Cut'
+    DICH'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: e73a58f6e2794ae7b1b7e50b7fb811b0, type: 2}
@@ -811,8 +810,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4292190463
+  m_fontColor: {r: 1, g: 0.6273585, b: 0.8352941, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 1
   m_fontColorGradient:
@@ -824,7 +823,7 @@ MonoBehaviour:
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
   m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: 2427
+  m_TextStyleHashCode: 97690656
   m_overrideHtmlColors: 0
   m_faceColor:
     serializedVersion: 2
@@ -1280,7 +1279,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Do Not Click Me
+  m_text: Kiss <3
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1307,7 +1306,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 19.45
+  m_fontSize: 26.85
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -3792,20 +3791,11 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: "Congratulations, you absolute quantum-level genius.
-            You saw the one thing labeled explicitly as something not to interact
-            with, and your brain went, \u201CHehe, what if I did tho \U0001F60F.\u201D
-            Truly the intellectual equivalent of touching a \"Wet Paint\" sign and
-            then acting shocked your fingers are red.  What did you expect? A prize?
-            A confetti cannon? Maybe a popup saying \u201CWow! You\u2019re the chosen
-            one!\u201D No. You got exactly what you deserve: judgment. From me. From
-            the button. From the entire digital realm.  You are the reason instructions
-            come with pictures. You are the reason toaster manuals say \u201CDo not
-            insert while bathing.\u201D You are the final boss of bad decisions wrapped
-            in human skin.  Next time you see a button that says \u201CDo Not Click,\u201D
-            take a breath, step back, and ask yourself: \u201CDo I want to be that
-            guy again?\u201D The answer is no. Sit down. Reflect. And maybe\u2014just
-            maybe\u2014don\u2019t click it."
+          m_StringArgument: "To You, Mein Herz  In your eyes, the world feels right,
+            A gentle star in my darkest night. So small in size, yet vast in grace,
+            You light up life with just your face.  Thoughtful words, a quiet touch\u2014
+            You give so much, you feel so much. Incredible you, so rare, so true,
+            My world is better just with you."
           m_BoolArgument: 0
         m_CallState: 1
 --- !u!114 &1661872345

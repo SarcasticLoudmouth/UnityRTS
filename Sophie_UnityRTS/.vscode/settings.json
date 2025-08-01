@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "RTS Udemy Git.sln"
+    "dotnet.defaultSolution": "Sophie_UnityRTS.sln"
 }
